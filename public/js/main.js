@@ -109,7 +109,7 @@ const carrotCalculator = document.querySelector('.carrot-calculator');
 //Sélectionner l'élément audio
 const carrotSound = document.getElementById('carrot-sound');
 
-//Ajouter un événement au survol de la calculette
+//Ajout un événement au survol de la calculette
 carrotCalculator.addEventListener('mouseenter', () => {
     carrotSound.currentTime = 0; 
     carrotSound.play(); 
