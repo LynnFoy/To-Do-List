@@ -348,7 +348,7 @@ button.delete-btn:hover {
   }
 }
 
-/* Plus de styles spécifiques pour les petites tailles */
+/* Pour les petites tailles */
 @media (max-width: 320px) {
   .postit {
     padding: 8px;
