@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+  
+<div class="container">
+    <h1>Ma To-Do List</h1>
+    <div class="task-container">
+      <input type="text" id="new-task" placeholder="Ajouter une nouvelle tâche...">
+      <button id="add-task-btn">Ajouter</button>
+    </div>
+
+<div class="task-lists">
+    <div class="postit" id="ongoing-list">
+        <h3>En cours</h3>
+        <ul id="in-progress-tasks"></ul>
+    </div>
+
+    <div class="postit" id="completed-list">
+        <h3>Terminées</h3>
+        <ul id="completed-tasks"></ul>
+    </div>
+
+    <div class="postit" id="deleted-list">
+        <h3>Supprimées</h3>
+        <ul id="deleted-tasks"></ul>
+    </div>
+</div>
+</div>
+
+<div class="filter-container">
+    <label for="filter">Filtrer par catégorie :</label>
+    <select id="filter">
+      <option value="all">Tous</option>
+      <option value="ongoing">En cours</option>
+      <option value="completed">Terminées</option>
+      <option value="deleted">Supprimées</option>
+    </select>
+</div>
+
+<!-- Calculette  -->
+<div class="carrot-calculator-container">
+  <h1>Mini calculette Carotte</h1>
+  <h5 style="color: orange; text-decoration: underline;">Passe la souris sur la carotte</h5>
+    <div class="carrot-calculator">
+      <div class="calculator">
+        <div class="display">
+          <input type="text" id="result" disabled />
+        </div>
+        <div class="buttons">
+          <button class="btn btn-num" onclick="appendValue('7')">7</button>
+          <button class="btn btn-num" onclick="appendValue('8')">8</button>
+          <button class="btn btn-num" onclick="appendValue('9')">9</button>
+          <button class="btn btn-op" onclick="appendValue('/')">/</button>
+
+          <button class="btn btn-num" onclick="appendValue('4')">4</button>
+          <button class="btn btn-num" onclick="appendValue('5')">5</button>
+          <button class="btn btn-num" onclick="appendValue('6')">6</button>
+          <button class="btn btn-op" onclick="appendValue('*')">*</button>
+
+          <button class="btn btn-num" onclick="appendValue('1')">1</button>
+          <button class="btn btn-num" onclick="appendValue('2')">2</button>
+          <button class="btn btn-num" onclick="appendValue('3')">3</button>
+          <button class="btn btn-op" onclick="appendValue('-')">-</button>
+
+          <button class="btn btn-num" onclick="appendValue('0')">0</button>
+          <button class="btn btn-clear" onclick="clearDisplay()">C</button>
+          <button class="btn btn-equal" onclick="calculateResult()">=</button>
+          <button class="btn btn-op" onclick="appendValue('+')">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<audio id="carrot-sound" src="./public/sounds/Son-ToDoList.mp3"></audio>
+
+<script src="./public/js/calculator.js"></script>
+<script type="module" src="./public/js/main.js"></script>
+
+</body>
+</html>
